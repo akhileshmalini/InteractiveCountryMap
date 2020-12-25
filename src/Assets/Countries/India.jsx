@@ -18,7 +18,7 @@ function Icon({
     }
     #IN-LD-LAND {
       stroke: ${fillColor};
-      stroke-width: ${fillColor};
+      stroke-width: 3px;
     }
   `;
 
