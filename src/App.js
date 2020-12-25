@@ -23,7 +23,9 @@ function App() {
   const [stateName, setStateName] = useState("India");
 
   const onMapClickHandler = (id, title) => {
-    alert(title);
+    if (title) {
+      alert(title);
+    }
   };
   const onMapHoverHandler = (id, title) => {
     if (title) {
