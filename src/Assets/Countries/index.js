@@ -1,3 +1,3 @@
-import India from "./India";
+import Map from "./Map";
 
-export { India };
+export default Map;

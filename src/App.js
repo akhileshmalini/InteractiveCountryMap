@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { India } from "./Assets/Countries";
+import Map from "./Assets/Countries";
 import { Navbar } from "./Components";
 import Typography from "@material-ui/core/Typography";
 import styled from "@emotion/styled";
@@ -20,7 +20,7 @@ const StyledMapContainer = styled.div`
 `;
 
 function App() {
-  const [stateName, setStateName] = useState("India");
+  const [stateName, setStateName] = useState(null);
 
   const onMapClickHandler = (id, title) => {
     if (title) {
@@ -31,7 +31,7 @@ function App() {
     if (title) {
       setStateName(title);
     } else {
-      setStateName("India");
+      setStateName(null);
     }
   };
 
@@ -40,7 +40,11 @@ function App() {
       <Navbar />
       <StyledDisplayContainer>
         <StyledMapContainer>
-          <India onClick={onMapClickHandler} onHover={onMapHoverHandler} />
+          <Map
+            countryCode="USA"
+            onClick={onMapClickHandler}
+            onHover={onMapHoverHandler}
+          />
         </StyledMapContainer>
         <Typography variant="h2" align="center">
           {stateName}
